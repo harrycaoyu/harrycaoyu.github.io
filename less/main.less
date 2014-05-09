@@ -1,48 +1,26 @@
-@header_height: 70px;
-@text_color: #7a7a7a;
-@nav_color: white;
-@nav_hover_color: #0093dd;
-@logo_color: white;
-@background: #ff6600;
+@import "bootstrap/bootstrap.less";
 
-/* global reset */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html, body { height: 100%; }
-
-body {
-    background-color: #FFF;
-    font: 13.34px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: small;
-    text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-}
-
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
-
-/* elements */
-body {
-    background: white;
-    color: @text_color;
-    a {
-        color: @text_color;
-    }
-}
-iframe {
-    background-color: @background;
-    display: block;
+html, body {
+    height: 100%;
 }
 .background-video {
     width: 100%;
     height: 115%;
+    text-align: center;
+    vertical-align: middle;
+}
+iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
     border: none;
+}
+.logo {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
 }
 .sticky {
     position: relative;
@@ -51,81 +29,109 @@ iframe {
 .fixed {
     position: fixed;
 }
-.dropdown.open
-    > a {
-    background-color: @background !important;
-    color: white;
-}
-.dropdown-menu {
-    background: @background;
-    border: 1px solid @text_color !important;
-    li {
-        margin: 0px;
-        a {
-            margin: 10px;
-        }
-    }
-}
-.collapsing, .collapse.in {
-    background-color: @background;
-    border-collapse: collapse;
-}
 header {
-    vertical-align: middle;
-    height: @header_height;
+    height: @brizi-header-height;
     .navbar-header {
         button {
-            border: 1px solid desaturate(@nav_hover_color, 30%);
             margin-top: 18px;
-            .icon-bar {
-                border: 1px solid @nav_hover_color;
-            }
         }
     }
     nav {
+        z-index: 20;
         width: 100%;
-        height: @header_height;
-        color: @nav_color;
         padding: 0px 8%;
         position: absolute;
-        background-color: @background;
-        border-radius: 0px !important;
         li {
-            display: inline-block;
-            font-size: 13px;
-            letter-spacing: .1em;
             text-transform: uppercase;
-        }
-        > li {
-            margin-left: 40px;
         }
         a {
             font-weight: 500;
-            margin-top: 10px;
             &.navbar-brand {
-                color: @logo_color !important;
                 font-size: 18px;
                 font-weight: 700;
                 text-transform: uppercase;
-                letter-spacing: .2em;
-                &:hover {
-                    color: @nav_hover_color !important;
-                }
             }
-            &:hover {
-                color: @nav_hover_color !important;
-                background-color: @background !important;
-            }
-            &:visited {
-                color: @nav_color;
-            }
-        }
-        .icon-bar {
         }
     }
 }
+section {
+    text-align: center;
+    padding: 70px 10px;
+    &:nth-of-type(odd) {
+        background: white;
+    }
+    &:nth-of-type(even) {
+        background: #f0f0f0;
+    }
+    &.portfolio {
+        background-color: black;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &.contact {
+        background: #9bc7dd;
+        padding-top: 0px;
+        padding-bottom: 30px;
+        color: black;
+        a {
+            color: inherit;
+        }
+        > * {
+            text-align: left;
+        }
+        .box {
+            max-width: 400px;
+            margin: auto;
+            .actions {
+                float: right;
+                list-style: none;
+                font-size: floor((@brizi-paragraph-font-size * 0.85));
+                padding: 0px;
+                padding-top: 40px;
+                li {
+                    line-height: floor((@brizi-paragraph-font-size * 1.7));
+                }
+            }
+            .brace {
+                font-size: 180px;
+                line-height: floor((180px * 1.2));
+                margin: 0px;
+                text-align: left;
+            }
+        }
+    }
+    h4 {
+        text-transform: uppercase;
+        width: 100%;
+        line-height: 30px;
+        font-weight: 500;
+        letter-spacing: .15em;
+        color: black;
+        margin-bottom: 25px;
+    }
+    p {
+        &:first-of-type {
+            margin-top: 25px;
+        }
+        text-align: center;
+        font-size: @brizi-paragraph-font-size;
+        line-height: 40px;
+        width: 60%;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+    hr {
+        width: 80px;
+        height: 2px;
+        background: #ccc;
+        border: 0;
+        margin: 0 auto;
+    }
+}
 footer {
-    height: @header_height;
-    margin-top: 30px;
-    vertical-align: middle;
+    color: @brizi-labels-color;
+    background: @component-active-bg;
+    height: @brizi-header-height;
+    padding-top: 30px;
+    text-align: center;
 }
