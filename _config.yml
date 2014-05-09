@@ -1,5 +1,5 @@
 name: Brizi
 markdown: redcarpet
-pygments: true
-exclude: [Makefile]
+highlighter: pygments
+exclude: [Makefile, less]
 baseurl: /new/
