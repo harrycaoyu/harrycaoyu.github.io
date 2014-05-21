@@ -7,4 +7,5 @@ $(function() {
            $(".sticky").removeClass("fixed");
         }
     });
+    $.localScroll({offset: -70});
 });
