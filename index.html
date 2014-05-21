@@ -1,28 +1,54 @@
 ---
 layout: video
 title: Brizi &ndash; Above it All
+main: true
 ---
 
-<section>
-    <h4>A new form of user generated content</h4>
+<section id="what">
+    <h4>What it is</h4>
     <hr>
     <p>
-        Brizi is an intelligent flying media platform with real time automated content production &amp; curation, controlled from any mobile device.
+        Brizi is an intelligent blimp equipped with a camera, that responds to its environment. It can be controlled both from a mobile device and by hand gestures, and makes footage instantly available to social applications.
     </p>
 </section>
 
-<section class="portfolio">
+<section id="features">
+    <h4>Features</h4>
+    <hr>
+    <div class="feature">
+        <img src="{{ site.baseurl }}images/blimp.jpg">
+        <p>
+            Brizi can fly for 2 hours.
+        </p>
+    </div>
+    <div class="feature">
+        <img src="{{ site.baseurl }}images/arduino.jpg">
+        <p>
+            Brizi uses Arduino.
+        </p>
+    </div>
+    <div class="feature">
+        <img src="{{ site.baseurl }}images/code.png">
+        <p>
+            Brizi exposes a RESTful HTTP API.
+        </p>
+    </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+    <h4>Portfolio</h4>
+    <hr>
     <div id="bubble-container" style="height: 704px; width: 704px;">
         <div class="bubble-wrapper" id="bubble1">
             <div class="bubble" id="main-bubble">
-                <img id="blogo" src="./Portfolio_files/b-black.png">
+                <img id="blogo" src="{{ site.baseurl }}images/b-white.png">
             </div>
         </div>
         <a href="http://dalyagershtein.com/brizi/event1.html">
         <div class="bubble-wrapper" id="bubble2">
             <div class="bubble" id="item2">
                 <img style="height:100%" src="./Portfolio_files/thumb0129.jpg">
-                <h2>    NBTC14 </h2>
+                <h2></h2>
             </div>
         </div>
         </a>
@@ -30,7 +56,7 @@ title: Brizi &ndash; Above it All
         <div class="bubble-wrapper med" id="bubble3">
             <div class="bubble" id="item3">
                 <img style="height:100%" src="./Portfolio_files/thumb0129.jpg">
-                <h2>    NBTC14 </h2>
+                <h2></h2>
             </div>
         </div>
         </a>
@@ -38,7 +64,7 @@ title: Brizi &ndash; Above it All
         <div class="bubble-wrapper med" id="bubble4">
             <div class="bubble" id="item4">
                 <img style="height:100%" src="./Portfolio_files/thumb0129.jpg">
-                <h2>    NBTC14 </h2>
+                <h2></h2>
             </div>
         </div>
         </a>
@@ -46,7 +72,7 @@ title: Brizi &ndash; Above it All
         <div class="bubble-wrapper med" id="bubble5">
             <div class="bubble" id="item5">
                 <img style="height:100%" src="./Portfolio_files/thumb00319.jpg">
-                <h2>    NBTC14 </h2>
+                <h2></h2>
             </div>
         </div>
         </a>
@@ -54,7 +80,7 @@ title: Brizi &ndash; Above it All
         <div class="bubble-wrapper med" id="bubble6">
             <div class="bubble" id="item6">
                 <img style="height:100%" src="./Portfolio_files/thumb00373.jpg">
-                <h2>    NBTC14 </h2>
+                <h2></h2>
             </div>
         </div>
         </a>
@@ -101,15 +127,41 @@ title: Brizi &ndash; Above it All
     </div>
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
+    <h4>Contact</h4>
+    <hr>
     <div class="box">
         <ul class="actions">
-            <li><a href="https://www.twitter.com/flybrizi">follow us on twitter</a></li>
-            <li><a href="">read the documentation</a></li>
-            <li><a href="">create a sample event</a></li>
-            <li><a href="mailto:hello@flybrizi.com">get on the mailing list</a></li>
-            <li><a href="mailto:hello@flybrizi.com">send us an email</a></li>
+            <li>
+                <a href="https://www.twitter.com/flybrizi">
+                    follow us on twitter
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    read the documentation
+                </a>
+            </li>
+            <li>
+                <a href="mailto:{{ site.email }}">
+                    get on the mailing list
+                </a>
+            </li>
+            <li>
+                <a href="mailto:{{ site.email }}">
+                    send us an email
+                </a>
+            </li>
         </ul>
         <p class="brace">{</p>
     </div>
+    <!-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=MaRS%20Discovery%20District&key=..."></iframe> -->
+</section>
+
+<section id="partners">
+    <h4>Partners</h4>
+    <hr>
+    <a href="http://thenext36.ca/"><img class="sponsor" src="{{ site.baseurl }}images/n36.jpg"></a>
+    <a href="http://www.marsdd.com/clients-and-tenants/brizi/"><img class="sponsor" src="{{ site.baseurl }}images/MaRS.png"></a>
+    <a href="http://www.osler.com/"><img class="sponsor" src="{{ site.baseurl }}images/osler.png"></a>
 </section>

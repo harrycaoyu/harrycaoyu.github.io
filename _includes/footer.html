@@ -1,3 +1,9 @@
 <footer>
-    Brizi &copy; {{ site.time | date: "%Y" }}+
+    <span class="copyright">
+        Brizi &copy; {{ site.time | date: "%Y" }}+ | <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </span>
+    <span class="social">
+        <a href="http://facebook.com/flybrizi"><img src="{{ site.baseurl }}images/facebook1.svg"></a>
+        <a href="http://twitter.com/flybrizi"><img src="{{ site.baseurl }}images/twitter1.svg"></a>
+    </span>
 </footer>
