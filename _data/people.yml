@@ -1,11 +1,11 @@
 employees:
-    - name: Anna Hu
-    - name: Sami Dalati
-    - name: Marcus Tan
-    - name: Sam Murray
-    - name: Chris Kao
-    - name: Kenneth Lee
-    - name: Dmitry Blotsky
+  - name: Anna Hu
+  - name: Sami Dalati
+  - name: Marcus Tan
+  - name: Sam Murray
+  - name: Chris Kao
+  - name: Kenneth Lee
+  - name: Dmitry Blotsky
 directors:
-    - name: Chris Erickson
-    - name: William Mougayar
+  - name: Chris Erickson
+  - name: William Mougayar

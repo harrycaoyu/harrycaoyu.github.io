@@ -15,24 +15,15 @@ main: true
 <section id="features">
     <h4>Features</h4>
     <hr>
+    {% for feature in site.data.features %}
     <div class="feature">
-        <img src="{{ site.baseurl }}images/blimp.jpg">
+        <img src="{{ site.baseurl }}images/{{ feature.image }}">
+        <h5>{{ feature.title }}</h5>
         <p>
-            Brizi can fly for 2 hours.
+            {{ feature.words }}
         </p>
     </div>
-    <div class="feature">
-        <img src="{{ site.baseurl }}images/arduino.jpg">
-        <p>
-            Brizi uses Arduino.
-        </p>
-    </div>
-    <div class="feature">
-        <img src="{{ site.baseurl }}images/code.png">
-        <p>
-            Brizi exposes a RESTful HTTP API.
-        </p>
-    </div>
+    {% endfor %}
 </section>
 
 <section class="portfolio" id="portfolio">
@@ -158,10 +149,10 @@ main: true
     <!-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=MaRS%20Discovery%20District&key=..."></iframe> -->
 </section>
 
-<section id="partners">
+<!-- <section id="partners">
     <h4>Partners</h4>
     <hr>
     <a href="http://thenext36.ca/"><img class="sponsor" src="{{ site.baseurl }}images/n36.jpg"></a>
     <a href="http://www.marsdd.com/clients-and-tenants/brizi/"><img class="sponsor" src="{{ site.baseurl }}images/MaRS.png"></a>
     <a href="http://www.osler.com/"><img class="sponsor" src="{{ site.baseurl }}images/osler.png"></a>
-</section>
+</section> -->

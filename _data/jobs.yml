@@ -1,5 +1,4 @@
-positions:
-    - name: Software Engineer
-      description:
-    - name: Marketing Associate
-      description:
+- name: Software Engineer
+  description:
+- name: Marketing Associate
+  description:

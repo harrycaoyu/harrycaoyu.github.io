@@ -16,8 +16,8 @@ permalink: /careers/
     <h4>Current Positions</h4>
     <hr>
     <ul>
-        {% for position in site.data.jobs.positions %}
-        <li>{{ position.name }}</li>
+        {% for job in site.data.jobs %}
+        <li>{{ job.name }}</li>
         {% endfor %}
     </ul>
 </section>
