@@ -25,8 +25,17 @@
         width: 100%;
         height: 100%;
         -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -ms-transition-duration: 0.2s;
+        transition-duration: 0.2s;
         -webkit-transition-property: all;
+        -moz-transition-property: all;
+        -ms-transition-property: all;
+        transition-property: all;
         -webkit-transition-timing-function: ease-in-out;
+        -moz-transition-timing-function: ease-in-out;
+        -ms-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
         text-align: center;
         //background: #f16822;
         background: @brizi-orange;
@@ -67,8 +76,17 @@
         width: 100%;
         height: 100%;
         -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -ms-transition-duration: 0.2s;
+        transition-duration: 0.2s;
         -webkit-transition-property: all;
+        -moz-transition-property: all;
+        -ms-transition-property: all;
+        transition-property: all;
         -webkit-transition-timing-function: ease-in-out;
+        -moz-transition-timing-function: ease-in-out;
+        -ms-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
         text-align: center;
         //background: #2490cf;
         background: @brizi-blue;
@@ -86,6 +104,9 @@
     .gps_ring {
         background-color:#2490cf;
         -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        border-radius: 100%;
         background-color:@brizi-blue;
         position: absolute;
         opacity: 0.0
@@ -93,24 +114,56 @@
 
     .ring_animate {
         -webkit-animation: pulsate 2.1s ease-in;
+        -moz-animation: pulsate 2.1s ease-in;
+        -ms-animation: pulsate 2.1s ease-in;
+        animation: pulsate 2.1s ease-in;
         -webkit-animation-iteration-count: 1;
+        -moz-animation-iteration-count: 1;
+        -ms-animation-iteration-count: 1;
+        animation-iteration-count: 1;
         opacity: 1.0
     }
 
     .slow {
        -webkit-animation: pulsate 3.2s ease-out !important;
+       -moz-animation: pulsate 3.2s ease-out !important;
+       -ms-animation: pulsate 3.2s ease-out !important;
+       animation: pulsate 3.2s ease-out !important;
        -webkit-animation-iteration-count: 1 !important;
+       -moz-animation-iteration-count: 1 !important;
+       -ms-animation-iteration-count: 1 !important;
+       animation-iteration-count: 1 !important;
     }
 
     .fast {
        -webkit-animation: pulsate 1s ease-out !important;
+       -moz-animation: pulsate 1s ease-out !important;
+       -ms-animation: pulsate 1s ease-out !important;
+       animation: pulsate 1s ease-out !important;
        -webkit-animation-iteration-count: 1 !important;
+       -moz-animation-iteration-count: 1 !important;
+       -ms-animation-iteration-count: 1 !important;
+       animation-iteration-count: 1 !important;
     }
 
     @-webkit-keyframes pulsate {
-        0% {-webkit-transform: scale(0.5, 0.5); opacity: 0.0;}
-        50% {opacity: 0.5;}
-        100% {-webkit-transform: scale(1.0,1.0); opacity: 1.0;}
+        0% {
+            -webkit-transform: scale(0.5, 0.5);
+            -moz-transform: scale(0.5, 0.5);
+            -ms-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+            opacity: 0.0;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        100% {
+            -webkit-transform: scale(1.0,1.0);
+            -moz-transform: scale(1.0,1.0);
+            -ms-transform: scale(1.0,1.0);
+            transform: scale(1.0,1.0);
+            opacity: 1.0;
+        }
     }
 
     #bubble1 {
@@ -165,6 +218,7 @@
     #line1 {
     -ms-transform: rotate(-82deg); /* IE 9 */
     -webkit-transform: rotate(-82deg); /* Chrome, Safari, Opera */
+    -moz-transform: rotate(-82deg); /* Chrome, Safari, Opera */
     transform: rotate(-82deg);
     top: 30%;
     left: 47.5%;
@@ -177,6 +231,7 @@
     left: 63%;
     -ms-transform: rotate(-18deg);
     -webkit-transform: rotate(-18deg);
+    -moz-transform: rotate(-18deg);
     transform: rotate(-18deg);
     }
 
@@ -185,6 +240,7 @@
     top: 49%;
     -ms-transform: rotate(-4deg);
     -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
     transform: rotate(-4deg);
     left: 23.5%;
     }
@@ -194,6 +250,7 @@
     top: 67%;
     -ms-transform: rotate(-56deg);
     -webkit-transform: rotate(-56deg);
+    -moz-transform: rotate(-56deg);
     transform: rotate(-56deg);
     left: 29%;
     }
@@ -203,6 +260,7 @@
     top: 67%;
     -ms-transform: rotate(62deg);
     -webkit-transform: rotate(62deg);
+    -moz-transform: rotate(62deg);
     transform: rotate(62deg);
     left: 50%;
     }

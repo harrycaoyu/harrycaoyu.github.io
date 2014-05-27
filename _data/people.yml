@@ -23,7 +23,7 @@ employees:
 directors:
   - name:  Chris Erickson
     title: Director
-    photo: team/chris_e.jpg
+    photo: team/chris_e2.jpg
   - name:  William Mougayar
     title: Director
-    photo: team/zeppelin.jpg
+    photo: team/william.jpg
