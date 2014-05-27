@@ -1,5 +1,18 @@
 @import "bootstrap/bootstrap.less";
 
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Josefin Sans"), local("JosefinSans"), url(http://themes.googleusercontent.com/static/fonts/josefinsans/v5/xgzbb53t8j-Mo-vYa23n5qRDOzjiPcYnFooOUGCOsRk.woff) format("woff");
+}
+@font-face {
+  font-family: "Questrial";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Questrial"), local("Questrial-Regular"), url(http://themes.googleusercontent.com/static/fonts/questrial/v4/MYWJ4lYm5dbZ1UBuYox79LO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
+}
+
 @media only screen and (max-device-width: 480px) {
     .background-video {
         background: black;
@@ -65,8 +78,14 @@ header {
     height: @brizi-header-height;
     .navbar-header {
         .navbar-brand {
-            text-transform: lowercase;
-            letter-spacing: 0.1em;
+            padding: 0px;
+            img {
+                width: 80px;
+                height: 60px;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
         }
         button {
             margin-top: 18px;
@@ -94,8 +113,8 @@ section {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     &:nth-of-type(odd) {
         background: white;
     }
@@ -112,32 +131,36 @@ section {
             color: inherit;
         }
         .box {
-            > * {
-                text-align: left;
+            min-width: 380px;
+            max-width: 700px;
+            display: inline-block;
+            vertical-align: middle;
+            h3 {
+                font-size: 2.2em;
+                color: black;
+                font-weight: bold;
             }
-            max-width: 400px;
-            margin: auto;
-            .actions {
-                float: right;
-                list-style: none;
-                font-size: floor((@brizi-paragraph-font-size * 0.85));
-                padding: 0px;
-                padding-top: 40px;
-                li {
-                    line-height: floor((@brizi-paragraph-font-size * 2.05));
-                }
+            p {
+                text-align: left;
+                width: 90%;
+                font-weight: 300;
+                font-size: 2em;
+                margin-bottom: 30px;
                 a {
-                    &:hover {
-                        text-decoration: none;
-                        text-shadow: 0px 0px 2px @link-hover-color;
-                    }
+                    color: @brizi-blue;
                 }
             }
-            .brace {
-                font-size: 180px;
-                line-height: floor((180px * 1.2));
-                margin: 0px;
-                text-align: left;
+            &.map {
+                p {
+                    font-size: 1.1em;
+                    line-height: 1.5em;
+                    text-align: center;
+                    margin: 0px auto;
+                    margin-top: 20px;
+                }
+                img {
+                    box-shadow: 0px 0px 3px gray;
+                }
             }
         }
     }
