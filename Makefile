@@ -1,7 +1,7 @@
 USER        = brizi
 SERVER      = flybrizi.com
 LOCAL_SITE  = _site
-REMOTE_SITE = /home/brizi/public_html/new/
+REMOTE_SITE = /home/brizi/public_html/
 
 LESS_FILES = $(wildcard ./less/*.less ./less/bootstrap/bootstrap.less)
 CSS_FILES  = $(subst .less,.css,$(subst /less/,/css/,$(LESS_FILES)))

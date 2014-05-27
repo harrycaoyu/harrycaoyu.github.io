@@ -1,0 +1,27 @@
+<div class="event">
+    <div class="event-logo">
+        <a href="{{ site.baseurl }}">
+            <img class="logoimg" src="{{ site.baseurl }}images/favicon_320.png">
+        </a>
+    </div>
+    <h1>{{ include.event.title }}</h1>
+    <div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
+        <div class="carousel-inner">
+            <!-- class of active when it's the first item -->
+            {% for photo in include.event.photos %}
+            <div class="item {% if forloop.first %}active{% endif %}">
+                <img src="{{ site.baseurl }}images/{{ photo.image }}" alt="" />
+                <div class="carousel-caption">
+                    <p>{{ photo.caption }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="left carousel-control" href="#this-carousel-id" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#this-carousel-id" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>

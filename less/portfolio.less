@@ -39,7 +39,7 @@
     }
 
     div.bubble:hover {
-        border:10px solid @brizi-blue;//#f16822;
+        border:10px solid @brizi-orange;//#f16822;
         cursor:pointer;
     }
 
@@ -51,6 +51,8 @@
     .bubble img {
         height:100%;
         float:left;
+        border-radius: 100%;
+        border: 5px solid @brizi-orange;
     }
 
     #blogo {
@@ -440,17 +442,30 @@
         width: 100%;
         height: 100%;
     }
+}
 
+/************* events **********/
+.event-container {
+    text-align: center;
+}
 
-    /************* events **********/
-    .event-container {
-        text-align:center;
-    }
-
-    .event-container img {
-        width:500px;
+.event-container img {
+    width: 100%;
+    width: 100%;
     margin: 20px;
     border-radius: 100%;
     border: 10px solid #f16822;
+}
+
+.event {
+    background-color:black;
+    color: @brizi-orange;
+    .event-logo {
+        float: left;
+        text-align: center;
+        maring-right: 40px;
+        .logoimg {
+            height: 40px;
+        }
     }
 }

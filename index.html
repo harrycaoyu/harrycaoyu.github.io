@@ -4,12 +4,19 @@ title: Brizi &ndash; Above it All
 main: true
 ---
 
-<section id="what">
-    <h4>What it is</h4>
-    <hr>
-    <p>
-        Brizi is an intelligent blimp equipped with a camera, that responds to its environment. It can be controlled both from a mobile device and by hand gestures, and makes footage instantly available to social applications.
-    </p>
+<section>
+    <h3 class="tagline">An aerial media hub for social spaces.</h3>
+</section>
+
+<section class="what" id="what">
+    <div class="box blimp">
+        <img class="blimp" src="{{ site.baseurl }}images/blimp_shadow.png">
+    </div>
+    <div class="box description">
+        <p>
+            Brizi is an intelligent blimp that engages the crowd on its guided flight path, allowing anyone to capture or follow live photos and videos from above.
+        </p>
+    </div>
 </section>
 
 <section class="features" id="features">
@@ -19,9 +26,9 @@ main: true
     <div class="feature">
         <img src="{{ site.baseurl }}images/{{ feature.image }}">
         <h5>{{ feature.title }}</h5>
-        <p>
+        <!-- <p>
             {{ feature.words }}
-        </p>
+        </p> -->
     </div>
     {% endfor %}
 </section>
@@ -35,42 +42,42 @@ main: true
                 <img id="blogo" src="{{ site.baseurl }}images/b-white.png">
             </div>
         </div>
-        <a href="http://dalyagershtein.com/brizi/event1.html">
+        <a href="{{ site.baseurl }}event/doors-open/">
         <div class="bubble-wrapper" id="bubble2">
             <div class="bubble" id="item2">
-                <img style="height:100%" src="./Portfolio_files/thumb0129.jpg">
+                <img style="height:100%" src="{{ site.baseurl }}images/events/doors/main.jpg">
                 <h2></h2>
             </div>
         </div>
         </a>
-        <a href="http://dalyagershtein.com/brizi/event1.html">
+        <a href="{{ site.baseurl }}event/iotum/">
         <div class="bubble-wrapper med" id="bubble3">
             <div class="bubble" id="item3">
-                <img style="height:100%" src="./Portfolio_files/thumb0129.jpg">
+                <img style="height:100%" src="{{ site.baseurl }}images/events/iotum/main.jpg">
                 <h2></h2>
             </div>
         </div>
         </a>
-        <a href="http://dalyagershtein.com/brizi/event1.html">
+        <a href="{{ site.baseurl }}event/nbtc/">
         <div class="bubble-wrapper med" id="bubble4">
             <div class="bubble" id="item4">
-                <img style="height:100%" src="./Portfolio_files/thumb0129.jpg">
+                <img style="height:100%" src="{{ site.baseurl }}images/events/nbtc/main.jpg">
                 <h2></h2>
             </div>
         </div>
         </a>
-        <a href="http://dalyagershtein.com/brizi/event1.html">
+        <a href="{{ site.baseurl }}event/prototype/">
         <div class="bubble-wrapper med" id="bubble5">
             <div class="bubble" id="item5">
-                <img style="height:100%" src="./Portfolio_files/thumb00319.jpg">
+                <img style="height:100%" src="{{ site.baseurl }}images/events/prototype/main.jpg">
                 <h2></h2>
             </div>
         </div>
         </a>
-        <a href="http://dalyagershtein.com/brizi/event1.html">
+        <a href="{{ site.baseurl }}event/tedx/">
         <div class="bubble-wrapper med" id="bubble6">
             <div class="bubble" id="item6">
-                <img style="height:100%" src="./Portfolio_files/thumb00373.jpg">
+                <img style="height:100%" src="{{ site.baseurl }}images/events/tedx/main.jpg">
                 <h2></h2>
             </div>
         </div>
@@ -119,7 +126,7 @@ main: true
 </section>
 
 <section class="contact" id="contact">
-    <div class="box">
+    <div class="words box">
         <h3>Get in touch!</h3>
         <p>
             If you're an event organizer, marketer, producer, or want to see Brizi at your venue, let's chat!<br>
@@ -130,8 +137,8 @@ main: true
     <div class="map box">
         <img src="http://maps.googleapis.com/maps/api/staticmap?center=mars+discovery+district&zoom=15&scale=false&size=260x260&maptype=roadmap&sensor=false&format=png&visual_refresh=true&markers=size:mid%7Ccolor:red%7Cmars+discovery+district", alt="Map of Brizi @ MaRS Discovery District">
         <p>
-            We're based in MaRS Discovery District<br>
-            101 College St. Toronto, Ontario, Canada, M5G 1L7
+            We're based in the MaRS Discovery District<br>
+            101 College St. Toronto, ON, Canada, M5G 1L7
         </p>
     </div>
     <!-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=MaRS%20Discovery%20District&key=..."></iframe> -->

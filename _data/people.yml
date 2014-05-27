@@ -1,11 +1,29 @@
 employees:
-  - name: Anna Hu
-  - name: Sami Dalati
-  - name: Marcus Tan
-  - name: Sam Murray
-  - name: Chris Kao
-  - name: Kenneth Lee
-  - name: Dmitry Blotsky
+  - name:  Anna Hu
+    title: Co-Founder / No Title Needed
+    photo: team/anna.jpg
+  - name:  Sami Dalati
+    title: Co-Founder / Power Ranger Pink
+    photo: team/sami.jpg
+  - name:  Chris Kao
+    title: Power Ranger Yellow
+    photo: team/chris.jpg
+  - name:  Marcus Tan
+    title: Power Ranger Blue
+    photo: team/marcus.jpg
+  - name:  Sam Murray
+    title: Power Ranger Green
+    photo: team/sam.jpg
+  - name:  Dmitry Blotsky
+    title: Master Control Program
+    photo: team/dmitry.jpg
+  - name:  Kenneth Lee
+    title: Graf von Zeppelin
+    photo: team/zeppelin.jpg
 directors:
-  - name: Chris Erickson
-  - name: William Mougayar
+  - name:  Chris Erickson
+    title: Director
+    photo: team/chris_e.jpg
+  - name:  William Mougayar
+    title: Director
+    photo: team/zeppelin.jpg

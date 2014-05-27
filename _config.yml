@@ -3,4 +3,4 @@ email: hello@flybrizi.com
 markdown: redcarpet
 highlighter: pygments
 exclude: [Makefile, less]
-baseurl: /new/
+baseurl: /

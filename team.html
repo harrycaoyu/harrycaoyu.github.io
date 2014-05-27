@@ -7,11 +7,14 @@ permalink: /team/
     <h4>Our Team</h4>
     <hr>
     {% for employee in site.data.people.employees %}
-    <div class="employee">
-        <h5>{{ employee.name }}</h5>
-        <p>
-
-        </p>
+    <div class="box employee">
+        <img src="{{ site.baseurl }}images/{{ employee.photo }}">
+        <h5 class="name">
+            {{ employee.name }}
+        </h5>
+        <h6 class="title">
+            {{ employee.title }}
+        </h6>
     </div>
     {% endfor %}
 </section>
@@ -19,11 +22,14 @@ permalink: /team/
     <h4>Directors</h4>
     <hr>
     {% for employee in site.data.people.directors %}
-    <div class="employee mentor">
-        <h5>{{ employee.name }}</h5>
-        <p>
-
-        </p>
+    <div class="box employee mentor">
+        <img src="{{ site.baseurl }}images/{{ employee.photo }}">
+        <h5 class="name">
+            {{ employee.name }}
+        </h3>
+        <h6 class="title">
+            {{ employee.title }}
+        </h6>
     </div>
     {% endfor %}
 </section>
