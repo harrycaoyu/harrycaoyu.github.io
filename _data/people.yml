@@ -1,10 +1,10 @@
 employees:
-  - name:  Anna Hu
-    title: Co-Founder / No Title Needed
-    photo: team/anna.jpg
   - name:  Sami Dalati
     title: Co-Founder / Power Ranger Pink
     photo: team/sami.jpg
+  - name:  Anna Hu
+    title: Co-Founder / No Title Needed
+    photo: team/anna.jpg
   - name:  Chris Kao
     title: Power Ranger Yellow
     photo: team/chris.jpg

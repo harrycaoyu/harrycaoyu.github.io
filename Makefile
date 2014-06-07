@@ -15,8 +15,17 @@ css/bootstrap/bootstrap.css: $(filter-out ./less/bootstrap/bootstrap.less, $(wil
 css/%.css: less/%.less
 	lessc $< > $@
 
-sync: build
+sync_src: build
+	-scp $(LOCAL_SITE)/* $(USER)@$(SERVER):$(REMOTE_SITE)
+	scp -r $(LOCAL_SITE)/[!i]* $(USER)@$(SERVER):$(REMOTE_SITE)
+	# tar -cvf - $(LOCAL_SITE)/ | ssh $(USER)@$(SERVER) tar -xf - -C $(REMOTE_SITE)
+
+sync_all: build
 	scp -r $(LOCAL_SITE)/* $(USER)@$(SERVER):$(REMOTE_SITE)
+	# /usr/bin/rsync --dry-run --recursive --verbose -e ssh $(LOCAL_SITE)/ $(USER)@$(SERVER):$(REMOTE_SITE)
+
+login:
+	ssh $(USER)@$(SERVER)
 
 serve:
 	jekyll serve --watch
@@ -29,4 +38,4 @@ clean:
 	$(RM) css/*.css
 	$(RM) css/*/*.css
 
-.PHONY: clean sync build
+.PHONY: clean build
