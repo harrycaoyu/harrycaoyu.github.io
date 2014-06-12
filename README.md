@@ -68,7 +68,7 @@ To remove the generated site and all CSS, run:
 
 # References
 
-[Jekyll documentation](http://jekyllrb.com/docs/home/).<br>
-[LESS documentation](http://lesscss.org/features/).<br>
-[Bootstrap documentation](http://getbootstrap.com/).<br>
-[Make documentation](http://www.gnu.org/software/make/manual/make.html).<br>
+* [Jekyll documentation](http://jekyllrb.com/docs/home/)
+* [LESS documentation](http://lesscss.org/features/)
+* [Bootstrap documentation](http://getbootstrap.com/)
+* [Make documentation](http://www.gnu.org/software/make/manual/make.html)
