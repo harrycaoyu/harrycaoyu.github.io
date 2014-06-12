@@ -34,7 +34,7 @@ or simply:
 
     make
 
-The Makefile can upload the generated site using `scp` or `rsync` to the configured server by running either one of the :
+The Makefile can upload the generated site using `rsync` to the configured server by running:
 
     make sync
 
@@ -48,7 +48,13 @@ to determine the user, server, and remote directory to which to copy the site. T
 
     make sync USER=brizi SERVER=flybrizi.com REMOTE_DIR=/home/brizi/public_html/
 
-Although the `sync` target uses the most efficient copying method, not all servers support `rsync`. In the case that a server does not support `rsync`, the Makefile can be told to use `scp` by substituting `sync` for either `copy_all` or `copy_src`.
+Although the `sync` target uses the most efficient copying method, not all servers support `rsync`. In the case that a server does not support `rsync`, the Makefile can be told to use `scp` by substituting `sync` for either `copy_all` or `copy_src` by running:
+
+    make copy_all
+
+or:
+
+    make copy_src
 
 # Development
 
