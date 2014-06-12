@@ -24,6 +24,20 @@ Then to build the CSS and the site, run:
 
 The CSS will be generated in the `css` directory, and the entire site will be built in the `_site` directory.
 
+## Access to Hosting
+
+The deployment mechanism for the site depends on SSH access to the machine that hosts the site. On virtual private servers, usually the hosting provider will give instructions as to how to obtain SSH access.
+
+### AWS
+
+Amazon explains how to obtain SSH access to an instance [here](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html).
+
+### CPanel
+
+On CPanel, go to the main dashboard, scroll down to **Security**, and click **SSH/Shell Access**. A window will pop up with the IP of your computer. Click "Submit", and the remote machine will allow access to itself via SSH from only your IP.
+
+**NOTE**: You will likely need to repeat this process every time you access the remote machine from a different location because your computer's externally-visible IP will change.
+
 # Deployment
 
 The provided Makefile documents the different build and deployment options, and can show them by running:
