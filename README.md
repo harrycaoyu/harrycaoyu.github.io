@@ -26,15 +26,29 @@ The CSS will be generated in the `css` directory, and the entire site will be bu
 
 # Deployment
 
-The Makefile can upload the generated site using `scp` to the configured server, as specified by the following Makefile variables:
+The provided Makefile documents the different build and deployment options, and can show them by running:
+
+    make help
+
+or simply:
+
+    make
+
+The Makefile can upload the generated site using `scp` or `rsync` to the configured server by running either one of the :
+
+    make sync
+
+The Makefile uses the following variables:
 
 - USER
 - SERVER
-- REMOTE_SITE
+- REMOTE_DIR
 
-and then running:
+to determine the user, server, and remote directory to which to copy the site. The values can be either changed in the Makefile directly, or changed on the command line like so:
 
-    make sync
+    make sync USER=brizi SERVER=flybrizi.com REMOTE_DIR=/home/brizi/public_html/
+
+Although the `sync` target uses the most efficient copying method, not all servers support `rsync`. In the case that a server does not support `rsync`, the Makefile can be told to use `scp` by substituting `sync` for either `copy_all` or `copy_src`.
 
 # Development
 
@@ -54,7 +68,7 @@ To remove the generated site and all CSS, run:
 
 # References
 
-Jekyll documentation:    [http://jekyllrb.com/docs/home/]<br>
-LESS documentation:      [http://lesscss.org/features/]<br>
-Bootstrap documentation: [http://getbootstrap.com/]<br>
-Make documentation:      [http://www.gnu.org/software/make/manual/make.html]<br>
+[Jekyll documentation](http://jekyllrb.com/docs/home/).<br>
+[LESS documentation](http://lesscss.org/features/).<br>
+[Bootstrap documentation](http://getbootstrap.com/).<br>
+[Make documentation](http://www.gnu.org/software/make/manual/make.html).<br>
