@@ -1,10 +1,31 @@
-USER        = brizi
-SERVER      = flybrizi.com
-LOCAL_SITE  = _site
-REMOTE_SITE = /home/brizi/public_html/
+USER       = brizi
+SERVER     = flybrizi.com
+LOCAL_DIR  = ./_site
+REMOTE_DIR = /home/brizi/public_html
 
 LESS_FILES = $(wildcard ./less/*.less ./less/bootstrap/bootstrap.less)
 CSS_FILES  = $(subst .less,.css,$(subst /less/,/css/,$(LESS_FILES)))
+
+RFLAGS   = --recursive --verbose -e ssh
+SRC_ONLY = $(shell find $(LOCAL_DIR) -depth 1 -not \( -path '$(LOCAL_DIR)/images' -prune \) -not \( -path '$(LOCAL_DIR)/fonts' \))
+
+help:
+	@echo ""
+	@echo "USER:       $(USER)"
+	@echo "SERVER:     $(SERVER)"
+	@echo "LOCAL_DIR:  $(LOCAL_DIR)"
+	@echo "REMOTE_DIR: $(REMOTE_DIR)"
+	@echo ""
+	@echo "Usage:"
+	@echo "    make login     - logs in to the server"
+	@echo "    make build     - builds the CSS and the site"
+	@echo "    make clean     - removes all generated files"
+	@echo "    make css/*.css - generates the CSS file from its corresponding LESS file"
+	@echo ""
+	@echo "    make copy_all  - copies everything over using scp to $(REMOTE_DIR) on the server"
+	@echo "    make copy_src  - like copy_all, but only copies source files (no images or fonts)"
+	@echo "    make sync      - uses rsync to synchronise the local $(LOCAL_DIR) with $(REMOTE_DIR) on the server"
+	@echo ""
 
 build: $(CSS_FILES)
 	jekyll build
@@ -15,14 +36,16 @@ css/bootstrap/bootstrap.css: $(filter-out ./less/bootstrap/bootstrap.less, $(wil
 css/%.css: less/%.less
 	lessc $< > $@
 
-sync_src: build
-	-scp $(LOCAL_SITE)/* $(USER)@$(SERVER):$(REMOTE_SITE)
-	scp -r $(LOCAL_SITE)/[!i]* $(USER)@$(SERVER):$(REMOTE_SITE)
-	# tar -cvf - $(LOCAL_SITE)/ | ssh $(USER)@$(SERVER) tar -xf - -C $(REMOTE_SITE)
+copy_src copy_all sync_src sync_all: build
 
-sync_all: build
-	scp -r $(LOCAL_SITE)/* $(USER)@$(SERVER):$(REMOTE_SITE)
-	# /usr/bin/rsync --dry-run --recursive --verbose -e ssh $(LOCAL_SITE)/ $(USER)@$(SERVER):$(REMOTE_SITE)
+copy_src:
+	scp -r $(SRC_ONLY) $(USER)@$(SERVER):$(REMOTE_DIR)/
+
+copy_all:
+	scp -r $(LOCAL_DIR)/* $(USER)@$(SERVER):$(REMOTE_DIR)/
+
+sync:
+	rsync $(RFLAGS) $(LOCAL_DIR)/ $(USER)@$(SERVER):$(REMOTE_DIR)/
 
 login:
 	ssh $(USER)@$(SERVER)
@@ -30,12 +53,9 @@ login:
 serve:
 	jekyll serve --watch
 
-nuke:
-	ssh $(USER)@$(SERVER) "cd $(REMOTE_SITE) && rm -r ./*"
-
 clean:
-	$(RM) -r $(LOCAL_SITE)/*
+	$(RM) -r $(LOCAL_DIR)/*
 	$(RM) css/*.css
 	$(RM) css/*/*.css
 
-.PHONY: clean build
+.PHONY: clean build serve login copy_src copy_all sync_src sync_all sync build
