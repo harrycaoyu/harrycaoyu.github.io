@@ -1,9 +1,9 @@
 employees:
   - name:  Sami Dalati
-    title: "Co-Founder / Technology<br>Power Ranger Pink"
+    title: "Co-Founder, Technology<br>Power Ranger Pink"
     photo: team/sami.jpg
   - name:  Anna Hu
-    title: "Co-Founder / Product &amp; Business Development"
+    title: "Co-Founder, Sales &amp; Product"
     photo: team/anna.jpg
   - name:  Chris Kao
     title: "Lead Hardware Engineer<br>Power Ranger Yellow"
