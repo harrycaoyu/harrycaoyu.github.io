@@ -140,6 +140,20 @@ section {
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
+    button.fly {
+        background-color: @brizi-orange;
+        color: @brizi-labels-color;
+        font-size: 24px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        border-radius: 15px;
+        margin-top: 10px;
+        &:hover {
+            background-color: darken(@brizi-orange, 5%);
+            color: @brizi-labels-color;
+        }
+    }
     &:nth-of-type(odd) {
         background: white;
     }
@@ -176,6 +190,14 @@ section {
                     width: 100%;
                 }
             }
+        }
+    }
+    &.fly {
+        padding-left: 7%;
+        padding-right: 7%;
+        text-align: left;
+        p {
+            width: 80%;
         }
     }
     &.contact {
