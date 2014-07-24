@@ -31,6 +31,7 @@ main: true
         </p> -->
     </div>
     {% endfor %}
+    {% include fly_button.html %}
 </section>
 
 <section class="portfolio" id="portfolio">
@@ -129,9 +130,13 @@ main: true
     <div class="words box">
         <h3>Get in touch!</h3>
         <p>
-            If you're an event organizer, marketer, producer, or want to see Brizi at your venue, let's chat!<br>
+            If you're an event organizer, marketer, producer, and want to see Brizi at your venue, we'd love to chat!
             <br>
-            Contact us to learn more: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            <br>
+            {% include fly_button.html %}
+            <br>
+            <br>
+            For all other inquiries: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
         </p>
     </div>
     <div class="map box">
