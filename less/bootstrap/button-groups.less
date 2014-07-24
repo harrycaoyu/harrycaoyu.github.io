@@ -38,7 +38,7 @@
 // Optional: Group multiple button groups together for a toolbar
 .btn-toolbar {
   margin-left: -5px; // Offset the first child's margin
-  &:extend(.clearfix all) {};
+  &:extend(.clearfix all);
 
   .btn-group,
   .input-group {
@@ -96,9 +96,9 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.btn-group-xs > .btn { &:extend(.btn-xs) {}; }
-.btn-group-sm > .btn { &:extend(.btn-sm) {}; }
-.btn-group-lg > .btn { &:extend(.btn-lg) {}; }
+.btn-group-xs > .btn { &:extend(.btn-xs); }
+.btn-group-sm > .btn { &:extend(.btn-sm); }
+.btn-group-lg > .btn { &:extend(.btn-lg); }
 
 
 // Split button dropdowns
@@ -156,7 +156,7 @@
 
   // Clear floats so dropdown menus can be properly placed
   > .btn-group {
-    &:extend(.clearfix all) {};
+    &:extend(.clearfix all);
     > .btn {
       float: none;
     }
