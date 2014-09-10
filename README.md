@@ -34,7 +34,7 @@ The Makefile can upload the generated site using `scp` to the configured server,
 
 and then running:
 
-    make sync
+    make sync_all
 
 # Development
 

@@ -22,8 +22,8 @@ employees:
     photo: team/dmitry.jpg
 directors:
   - name:  Chris Erickson
-    title: "Director"
+    title: "Advisor"
     photo: team/chris_e2.jpg
-  - name:  William Mougayar
-    title: "Director"
-    photo: team/william.jpg
+  - name:  William Mougayr
+    title: "Advisor"
+    photo: team/william.jpg	
