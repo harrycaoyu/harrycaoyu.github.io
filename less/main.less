@@ -140,20 +140,6 @@ section {
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
-    button.fly {
-        background-color: @brizi-orange;
-        color: @brizi-labels-color;
-        font-size: 24px;
-        -webkit-border-radius: 15px;
-        -moz-border-radius: 15px;
-        -ms-border-radius: 15px;
-        border-radius: 15px;
-        margin-top: 10px;
-        &:hover {
-            background-color: darken(@brizi-orange, 5%);
-            color: @brizi-labels-color;
-        }
-    }
     &:nth-of-type(odd) {
         background: white;
     }
@@ -172,32 +158,45 @@ section {
         font-family: "Harabara";
     }
     &.what {
-        background-color: @brizi-blue;
-        * {
+        background-image: url('../images/people.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: inset 0px 0px 3px black;
+        p {
+            font-size: 3.5em;
+            line-height: 1em;
+            font-weight: bolder;
+            width: 80%;
+            margin: 100px auto;
             color: white;
-        }
-        .box {
-            &.blimp {
-                width: 25%;
-                img {
-                    width: 100%;
-                }
-            }
-            &.description {
-                margin: 0px 5%;
-                max-width: 600px;
-                p {
-                    width: 100%;
-                }
-            }
+            text-shadow: 0px 0px 5px black;
         }
     }
-    &.fly {
-        padding-left: 7%;
-        padding-right: 7%;
-        text-align: left;
-        p {
-            width: 80%;
+    &.description {
+        padding: 0px;
+        background-color: rgb(17, 134, 193);
+        color: white;
+        .box {
+            width: 33%;
+            min-width: 320px;
+            img {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+            p {
+                font-weight: 200;
+                font-size: 1.1em;
+                line-height: 1.35em;
+                margin: 0px auto;
+                width: 70%;
+            }
+            h3 {
+                font-size: 2.9em;
+                font-weight: bold;
+                text-align: center;
+            }
+            margin-top: 40px;
+            margin-bottom: 40px;
         }
     }
     &.contact {
@@ -249,9 +248,6 @@ section {
         margin-bottom: 25px;
     }
     p {
-        &:first-of-type {
-            margin-top: 25px;
-        }
         text-align: center;
         font-size: @brizi-paragraph-font-size;
         line-height: 40px;
