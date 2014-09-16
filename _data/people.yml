@@ -1,29 +1,29 @@
 employees:
   - name:  Sami Dalati
-    title: "Co-Founder / Technology<br>Power Ranger Pink"
+    title: "Co-Founder (Tech)<br>Power Ranger Pink"
     photo: team/sami.jpg
   - name:  Anna Hu
-    title: "Co-Founder / Product &amp; Business Development"
+    title: "Co-Founder (Business) <br>PowerPuff Buttercup"
     photo: team/anna.jpg
   - name:  Chris Kao
     title: "Lead Hardware Engineer<br>Power Ranger Yellow"
     photo: team/chris.jpg
   - name:  Kenneth Lee
-    title: "Lead Software Engineer<br>Graf von Zeppelin"
-    photo: team/zeppelin.jpg
-  - name:  Marcus Tan
-    title: "Software Engineer<br>Power Ranger Blue"
-    photo: team/marcus2.jpg
-  - name:  Sam Murray
-    title: "Hardware/Software Engineer<br>Power Ranger Green"
-    photo: team/sam.jpg
+    title: "Lead Software Engineer<br>Power Ranger Green"
+    photo: team/Kenneth.jpg
+  - name:  Cory Rosenfield
+    title: "Business Development<br>Power Ranger Black"
+    photo: team/cory.jpg
   - name:  Dmitry Blotsky
     title: "Software Engineer<br>Master Control Program"
     photo: team/dmitry.jpg
 directors:
   - name:  Chris Erickson
-    title: "Advisor"
+    title: "Founder & CEO, Datifex Inc."
     photo: team/chris_e2.jpg
-  - name:  William Mougayr
-    title: "Advisor"
+  - name:  William Mougayar
+    title: "Founder, Startup Management"
     photo: team/william.jpg	
+  - name:  Paulo Francisco
+    title: "CTO, Aastra Technologies"
+    photo: team/paulo.jpg
