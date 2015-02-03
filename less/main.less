@@ -19,10 +19,10 @@
   src: url("../fonts/font-corbert.otf");
 }
 @font-face {
-  font-family: "Harabara";
+  font-family: "Questrial";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Harabara.ttf");
+  src: local("Questrial"), local("Questrial-Regular"), url(http://themes.googleusercontent.com/static/fonts/questrial/v4/MYWJ4lYm5dbZ1UBuYox79LO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -155,7 +155,7 @@ section {
         color: @brizi-blue;
         letter-spacing: 0.05em;
         font-size: 2.1em;
-        font-family: "Harabara";
+        font-family: "Questrial";
     }
     &.what {
         background-image: url('../images/people.jpg');
@@ -282,7 +282,6 @@ section {
             }
             h5 {
                 color: darken(@brizi-words-color, 30%);
-                text-transform: uppercase;
                 font-weight: 400;
             }
             p {
