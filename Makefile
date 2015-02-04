@@ -1,7 +1,7 @@
-USER        = brizi
-SERVER      = flybrizi.com
+USER        = ubuntu
+SERVER      = 54.86.162.76
 LOCAL_SITE  = _site
-REMOTE_SITE = /home/brizi/public_html/
+REMOTE_SITE = /usr/share/nginx/html
 
 LESS_FILES = $(wildcard ./less/*.less ./less/bootstrap/bootstrap.less)
 CSS_FILES  = $(subst .less,.css,$(subst /less/,/css/,$(LESS_FILES)))
@@ -16,22 +16,22 @@ css/%.css: less/%.less
 	lessc $< > $@
 
 sync_src: build
-	-scp $(LOCAL_SITE)/* $(USER)@$(SERVER):$(REMOTE_SITE)
-	scp -r $(LOCAL_SITE)/[!i]* $(USER)@$(SERVER):$(REMOTE_SITE)
+	-scp -i brizi.pem $(LOCAL_SITE)/* $(USER)@$(SERVER):$(REMOTE_SITE)
+	scp -i brizi.pem -r $(LOCAL_SITE)/[!i]* $(USER)@$(SERVER):$(REMOTE_SITE)
 	# tar -cvf - $(LOCAL_SITE)/ | ssh $(USER)@$(SERVER) tar -xf - -C $(REMOTE_SITE)
 
 sync_all: build
-	scp -r $(LOCAL_SITE)/* $(USER)@$(SERVER):$(REMOTE_SITE)
+	scp -i brizi.pem -r $(LOCAL_SITE)/* $(USER)@$(SERVER):$(REMOTE_SITE)
 	# /usr/bin/rsync --dry-run --recursive --verbose -e ssh $(LOCAL_SITE)/ $(USER)@$(SERVER):$(REMOTE_SITE)
 
 login:
-	ssh $(USER)@$(SERVER)
+	ssh -i brizi.pem $(USER)@$(SERVER)
 
 serve:
 	jekyll serve --watch
 
 nuke:
-	ssh $(USER)@$(SERVER) "cd $(REMOTE_SITE) && rm -r ./*"
+	ssh -i brizi.pem $(USER)@$(SERVER) "cd $(REMOTE_SITE) && rm -r ./*"
 
 clean:
 	$(RM) -r $(LOCAL_SITE)/*
