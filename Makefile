@@ -21,7 +21,10 @@ sync_src: build
 	# tar -cvf - $(LOCAL_SITE)/ | ssh $(USER)@$(SERVER) tar -xf - -C $(REMOTE_SITE)
 
 sync_all: build
+	# Individual photos: for testing purposes only!
+	# scp -i brizi.pem BRIZI-IMG/output.jpg ubuntu@54.86.162.76:/usr/share/nginx/html/images
 	scp -i brizi.pem -r $(LOCAL_SITE)/* $(USER)@$(SERVER):$(REMOTE_SITE)
+	ssh -i brizi.pem $(USER)@$(SERVER) "chmod 775 /usr/share/nginx/html/images/* && exit"
 	# /usr/bin/rsync --dry-run --recursive --verbose -e ssh $(LOCAL_SITE)/ $(USER)@$(SERVER):$(REMOTE_SITE)
 
 login:
