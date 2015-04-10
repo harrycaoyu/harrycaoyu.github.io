@@ -2,15 +2,25 @@
 layout: base
 ---
 
-<div class="background-video">
-    <div class="logo">
-        <img src="{{ site.baseurl }}images/above_it_all.png">
-    </div>
-    <p class="slogan">
-      above it all.  
-    </p>
-    <!-- <iframe class="visible-desktop" src="http://www.youtube.com/embed/jE3ZLCpmtQw?&loop=1&playlist=jE3ZLCpmtQw&autoplay=1&modestbranding=1&controls=0&showinfo=0&html5=1&rel=0&version=3&origin=http://flybrizi/com"></iframe> -->
-
+<div id="home" class="background-video">
+	<div class="iframe-overlay">
+    	<iframe class="visible-desktop" src="https://www.youtube.com/embed/MXGUyLM5YQk?&loop=1&playlist=MXGUyLM5YQk&autoplay=1&modestbranding=1&controls=0&showinfo=0&html5=1&rel=0&version=3&origin=http://flybrizi/com"></iframe>
+	</div>
+	<div class="logo-container">
+		<img src="{{ site.baseurl }}images/above_it_all.png">
+		<p class="slogan">
+			A new class of drones.<br/>
+			Social. Interactive. Above it all. 
+		</p>
+		<div class="button-container">
+			<a id="watch-video" class="action-button" href="https://www.youtube.com/embed/MXGUyLM5YQk" target="blank">
+				Watch Video
+			</a>
+			<a class="action-button smoothscroll" href="{% if page.main != true %}{{ site.baseurl }}{% endif %}#description">
+				Learn More
+			</a>
+		</div>
+	</div>
 </div>
 
 {% include header.html %}
