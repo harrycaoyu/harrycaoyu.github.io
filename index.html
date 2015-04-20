@@ -59,7 +59,11 @@ main: true
     <div id="bubble-container" style="height: 704px; width: 704px;">
         <div class="bubble-wrapper" id="bubble1">
             <div class="bubble" id="main-bubble">
-                <img id="blogo" src="{{ site.baseurl }}images/b-white.png">
+                <!--img id="blogo" src="{{ site.baseurl }}images/b-white.png"-->
+                <button id="open-popup"></button>
+                <div id="my-popup" class="mfp-hide">
+                    Inline popup
+                </div>
             </div>
         </div>
 		<div class="bubble-wrapper" id="bubble2">
@@ -130,7 +134,7 @@ main: true
     </div>
 </section>
 
-
+<!--
 <div class="modal fade" id="mars">
   <div class="modal-dialog">
 	<div class="modal-content">
@@ -145,9 +149,10 @@ main: true
 		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	  </div>
 	</div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal --> 
-<div class="modal fade" id="canadapost">
+  <!--
+    </div><!-- /.modal-dialog -->
+<!--</div><!-- /.modal --> 
+<!--<div class="modal fade" id="canadapost">
   <div class="modal-dialog">
 	<div class="modal-content">
 	  <div class="modal-header">
@@ -161,10 +166,10 @@ main: true
 		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	  </div>
 	</div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal --> 
+  <!--</div><!-- /.modal-dialog -->
+<!--</div><!-- /.modal --> 
 
-<div class="modal fade" id="etsy">
+<!--<div class="modal fade" id="etsy">
   <div class="modal-dialog">
 	<div class="modal-content">
 	  <div class="modal-header">
@@ -178,9 +183,9 @@ main: true
 		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	  </div>
 	</div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal --> 
-<div class="modal fade" id="paypal">
+  <!--</div><!-- /.modal-dialog -->
+<!--</div><!-- /.modal --> 
+<!--<div class="modal fade" id="paypal">
   <div class="modal-dialog">
 	<div class="modal-content">
 	  <div class="modal-header">
@@ -194,9 +199,9 @@ main: true
 		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	  </div>
 	</div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal --> 
-<div class="modal fade" id="tedx">
+  <!--</div><!-- /.modal-dialog -->
+<!--</div><!-- /.modal --> 
+<!--<div class="modal fade" id="tedx">
   <div class="modal-dialog">
 	<div class="modal-content">
 	  <div class="modal-header">
@@ -210,8 +215,8 @@ main: true
 		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	  </div>
 	</div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal --> 
+  <!--</div><!-- /.modal-dialog -->
+<!--</div><!-- /.modal -->
 
 <section class="contact" id="contact">
     <div class="words box">
@@ -241,46 +246,9 @@ main: true
     </div>
 </section>
 
-<div class='container'>
-    <div class='row well well-lg'>
-        <button id="open-popup"></button>
-        <div id="my-popup" class="mfp-hide white-popup">
-      Inline popup
-        </div>
-        </div>
-</div>
 
-<script src="magnific-popup/jquery.magnific-popup.js"></script>
- <script>
-        $('#open-popup').magnificPopup({
-            items: [
-              {
-                src: 'http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Peter_%26_Paul_fortress_in_SPB_03.jpg/800px-Peter_%26_Paul_fortress_in_SPB_03.jpg',
-                title: 'Peter & Paul fortress in SPB'
-              },
-              {
-                src: 'https://www.youtube.com/watch?v=v9VORVmleiY',
-                type: 'iframe' // this overrides default type
-              },
-              {
-                src: $('<div class="white-popup">Dynamically created element</div>'), // Dynamically created element
-                type: 'inline'
-              },
-              {
-                src: '<div class="white-popup">Popup from HTML string</div>', // HTML string
-                type: 'inline'
-              },
-              {
-                src: '#my-popup', // CSS selector of an element on page that should be used as a popup
-                type: 'inline'
-              }
-            ],
-            gallery: {
-              enabled: true
-            },
-            type: 'image' // this is a default type
-        });
-    </script>
+
+ 
 <!--
 <section id="partners">
     <h4>Partners</h4>
