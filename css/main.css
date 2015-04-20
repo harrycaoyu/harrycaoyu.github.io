@@ -6166,3 +6166,22 @@ footer .social img {
   width: 20px;
   margin: 0px 2px;
 }
+
+#open-popup {
+    padding:20px;
+    height: 100px;
+    width: 100px;
+    display:block; 
+    background: url(../images/img-instagram.png) no-repeat center;
+    background-size: 100px, 100px;
+}
+
+.white-popup {
+  position: auto;
+  background: #FFF;
+  padding: 40px;
+  width: auto;
+  max-width: 200px;
+  margin: 20px auto;
+  text-align: center;
+}
