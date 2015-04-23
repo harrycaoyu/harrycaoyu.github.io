@@ -49,7 +49,71 @@
     <script type="text/javascript" src="{{ site.baseurl }}js/main.js"></script>
     <script src="magnific-popup/jquery.magnific-popup.js"></script>
         <script>
-            $('#open-popup-1, #open-popup-2, #open-popup-3, #open-popup-4, #open-popup-5').magnificPopup({
+            $('#open-popup-1').magnificPopup({
+                items: [
+                  {
+                    src: 'http://ec12.cdn.cincopa.com/IMG_3471.JPG?o=1&res=21&cdn=ec&p=y&pid=390385&ph3=g1vmcjrgyprwpw2bat3yy22b34exaeot&d=AsDA7AQ7MaAAv2BwA0xQYnA&as=mp3',
+                    title: 'Doors Open'
+                  },
+                  {
+                    src: 'http://ec12.cdn.cincopa.com/IMG_3465.JPG?o=1&res=23&cdn=ec&p=y&pid=390385&ph3=xhm4fqsuqw04abup5jtsoqo0nk10ufly&d=AsDA7AQ7MaAAv2BwA0xQYnA&as=mp3',
+                    title: 'Doors Open 2' // this overrides default type
+                  },
+                ],
+                gallery: {
+                  enabled: true
+                },
+                type: 'image' // this is a default type
+            });
+            $('#open-popup-2').magnificPopup({
+                items: [
+                  {
+                    src: 'http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Peter_%26_Paul_fortress_in_SPB_03.jpg/800px-Peter_%26_Paul_fortress_in_SPB_03.jpg',
+                    title: 'Peter & Paul fortress in SPB'
+                  },
+                  {
+                    src: 'https://www.youtube.com/watch?v=v9VORVmleiY',
+                    type: 'iframe' // this overrides default type
+                  },
+                ],
+                gallery: {
+                  enabled: true
+                },
+                type: 'image' // this is a default type
+            });
+            $('#open-popup-3').magnificPopup({
+                items: [
+                  {
+                    src: 'http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Peter_%26_Paul_fortress_in_SPB_03.jpg/800px-Peter_%26_Paul_fortress_in_SPB_03.jpg',
+                    title: 'Peter & Paul fortress in SPB'
+                  },
+                  {
+                    src: 'https://www.youtube.com/watch?v=v9VORVmleiY',
+                    type: 'iframe' // this overrides default type
+                  },
+                ],
+                gallery: {
+                  enabled: true
+                },
+                type: 'image' // this is a default type
+            });
+            $('#open-popup-4').magnificPopup({
+                items: [
+                  {
+                    src: 'http://ec12.cdn.cincopa.com/IMG_3544.JPG?o=1&res=74&cdn=ec&p=y&pid=390385&ph3=voqm4yldqlkvbfzjnw1rp43e0jbalvxr&d=AsDA7AQ7MaAAIpCwAEqIvtJ&as=mp3',
+                    title: 'Peter & Paul fortress in SPB'
+                  },
+                  {
+                    src: 'http://ec12.cdn.cincopa.com/Brizi2b-2b03-HD.mp4.mp4?o=6&res=72&cdn=ec&pid=390385&ph3=f42ks0ae0rlbtgtqbqctn5nnmzqk1gak&d=AsDA7AQ7MaAAIpCwAEqIvtJ&p=y&range=yes&a=y&fakelastparam=ffffff',
+                    type: 'iframe' // this overrides default type
+                  },
+                ],
+                gallery: {
+                  enabled: true
+                },
+                type: 'image' // this is a default type
+            });
+            $('#open-popup-5').magnificPopup({
                 items: [
                   {
                     src: 'http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Peter_%26_Paul_fortress_in_SPB_03.jpg/800px-Peter_%26_Paul_fortress_in_SPB_03.jpg',
